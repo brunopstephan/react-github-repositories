@@ -44,9 +44,9 @@ module.exports = {
         },
       },
       {
-        test: /\.scss?$/,
+        test: /\.css?$/,
         exclude: /node_modules/,
-        use: ['style-loader','css-loader', 'sass-loader'],
+        use: ['style-loader','css-loader'],
       },
     ]
   }

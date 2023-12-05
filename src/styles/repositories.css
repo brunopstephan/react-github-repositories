@@ -1,0 +1,79 @@
+.repository-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.repository-list .repositories-header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.repository-list input {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.repository-list li {
+  background-color: var(--light);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: 300ms;
+}
+
+.repository-list li:hover {
+  background-color: #c4c4c4;
+}
+
+.repository-list li a {
+  color: var(--default);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  width: fit-content;
+  transition: 500ms;
+}
+
+.repository-list li a:hover {
+  border: 1px solid var(--light);
+  color: var(--light);
+}
+
+.repository-list ul{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  list-style: none;
+  padding: 2rem;
+  overflow-y: auto;
+  border: 1px solid var(--default);
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.repository-user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.repository-user img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
