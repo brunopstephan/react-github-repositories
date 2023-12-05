@@ -24,9 +24,9 @@ export function RepositoryList(){
     id: 0,
     login: '',
     name: '',
-    html_url: '',
-    avatar_url: ''
-  }
+    avatar_url: '',
+    html_url: ''
+  } as RepositoryUser
 
   const [user, setUser] = useState('')
   const [userInput, setUserInput] = useState('')
