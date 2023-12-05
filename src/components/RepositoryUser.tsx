@@ -10,16 +10,8 @@ interface RepositoryUserProps{
   }
 }
 
-const defaultUser = {
-    id: 0,
-    login: '',
-    name: '',
-    html_url: '',
-    avatar_url: ''
-    
-}
 
-export function RepositoryUser(props: RepositoryUserProps = {user: defaultUser}){
+export function RepositoryUser(props: RepositoryUserProps){
     return (
         <div className="repository-user">
             <div className='photo'>

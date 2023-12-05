@@ -39,20 +39,6 @@
   background-color: #c4c4c4;
 }
 
-.repository-list li a {
-  color: var(--default);
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: .5rem 1rem;
-  text-decoration: none;
-  width: fit-content;
-  transition: 500ms;
-}
-
-.repository-list li a:hover {
-  border: 1px solid var(--light);
-  color: var(--light);
-}
 
 .repository-list ul{
   display: grid;

@@ -20,11 +20,20 @@ interface RepositoryUser {
 
 export function RepositoryList(){
 
+  const defaultUser = {
+    id: 0,
+    login: '',
+    name: '',
+    html_url: '',
+    avatar_url: ''
+  }
+
   const [user, setUser] = useState('')
+  const [userInput, setUserInput] = useState('')
 
   const [repositories, setRepositories] = useState<Repository[]>([])
 
-  const [userInfo, setUserInfo] = useState<RepositoryUser>({id: 0, login: '', name: '', html_url: '', avatar_url: ''})
+  const [userInfo, setUserInfo] = useState<RepositoryUser>(defaultUser)
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${user}/repos`)
@@ -43,12 +52,13 @@ export function RepositoryList(){
   return (
     <section className="repository-list">
       <div className="repositories-header">
-        <RepositoryUser user={userInfo}/>
         <h1>Lista de repositórios</h1>
-        <input type="text" id="userInput" onChange={(e)=>{ setUser(e.target.value)
+        <input type="text" id="userInput" onChange={(e)=>{ setUserInput(e.target.value)
         }}/>
+        <button className='button' onClick={() => {setUser(userInput)}}>Pesquisar</button>
       </div>
        
+        <RepositoryUser user={userInfo}/>
       <ul className='repositories'>
         {repositories.length > 0 ? repositories.map((repository) => {
           return <RepositoryItem key={repository.name} repository={repository}/>
