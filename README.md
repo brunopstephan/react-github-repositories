@@ -28,7 +28,7 @@ After the building complete, open 'dist/index.html'
 yarn dev
 ``` 
 
-It will be working [here](https://localhost:9000)
+After ending compiling, click in the link in your terminal
 
 
 
