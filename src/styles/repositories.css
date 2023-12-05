@@ -33,16 +33,24 @@
   margin-bottom: 10px;
   border-radius: 5px;
   transition: 300ms;
+  border: 1px solid var(--default);
+
 }
 
 .repository-list li:hover {
   background-color: #c4c4c4;
+  box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.78);
+  -webkit-box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.78);
+  -moz-box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.78);
+  transform: translateY(-10px);
 }
 
 
 .repository-list ul{
   display: grid;
   grid-template-columns: auto auto auto auto;
+  column-gap: 1rem;
+  row-gap: 1rem;
   list-style: none;
   padding: 2rem;
   overflow-y: auto;
